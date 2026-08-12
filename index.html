@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noeh | Portfolio UX-UI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body class="fondo-rosa">
+
+  <!--navbar de Bootstrap-->
+  <nav class="navbar navbar-expand-md navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/noehlogo.png" alt="Logo Noeh" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/sobre-mi.html">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/proyectos.html">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/herramientas.html">Herramientas</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--hero con imagen de fondo-->
+  <section class="hero-imagen">
+    <div class="hero-texto">
+      <h2>Bienvenida a mi portfolio UX-UI</h2>
+      <p>Soy Noelia, diseñadora UX-UI apasionada por crear experiencias digitales atractivas, funcionales y centradas en las personas.</p>
+    </div>
+  </section>
+
+  <!--main es principal-->
+  <main>
+
+    <article>
+      <h3>Sobre mí</h3>
+      <p>Me especializo en diseño UX y UI, investigando y creando interfaces pensadas para las necesidades reales de los usuarios.</p>
+    </article>
+
+    <section class="seccion-centrada">
+      <p class="etiqueta">¿QUÉ HAGO?</p>
+      <h2>Servicios</h2>
+
+      <div class="lista">
+
+        <article class="card" tabindex="0">
+          <img src="assets/images/disenioux.png" alt="Ícono Diseño UX" />
+          <h3>Diseño UX</h3>
+          <p>Investigo, analizo y diseño experiencias centradas en las personas y sus necesidades.</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="assets/images/disenioui.png" alt="Ícono Diseño UI" />
+          <h3>Diseño UI</h3>
+          <p>Creo interfaces visualmente atractivas, consistentes y fáciles de usar.</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <img src="assets/images/prototipado.png" alt="Ícono Prototipado" />
+          <h3>Prototipado</h3>
+          <p>Desarrollo prototipos interactivos para validar ideas y mejorar la experiencia de usuario.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!--sección de galería con carousel de 8 banners y reproducción automática-->
+    <section class="galeria">
+      <p class="etiqueta">MI PROCESO CREATIVO</p>
+      <h2>Conocé mi forma de trabajar</h2>
+
+      <div id="carouselGaleria" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselGaleria" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/images/banner1.png" alt="Banner 1" />
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner2.png" alt="Banner 2" />
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner3.png" alt="Banner 3" />
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner4.png" alt="Banner 4" />
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner5.png" alt="Banner 5" />
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner6.png" alt="Banner 6" />
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner7.png" alt="Banner 7" />
+            <div class="carousel-caption d-none d-md-block">
+             
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/banner8.png" alt="Banner 8" />
+            <div class="carousel-caption d-none d-md-block">
+              
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGaleria" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGaleria" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!--footer es pie de página-->
+  <footer>
+   <div class="footer-content">
+  <p>Redes Sociales</p>
+  <div class="footer-redes">
+    <a href="#" target="_blank">
+      <img src="assets/images/footerinstagram.png" alt="Instagram" />
+    </a>
+    <a href="http://www.linkedin.com/in/noelia-arcidiacono-9204953a7" target="_blank">
+      <img src="assets/images/footerlinkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="https://www.behance.net/noeliaarcidia1" target="_blank">
+      <img src="assets/images/footerbehance.png" alt="Behance" />
+    </a>
+  </div>
+</div>
+
+    <div class="footer-content">
+      <p>© 2026 Noeh. Todos los derechos reservados.</p>
+      <p>Dirección: Calle Falsa 123, Ciudad, País</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (CDN) - siempre antes del cierre de body -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+<!--el header y el footer no cambian. lo obligatorio del header es el logo y los botones
+del footer rrss copy y dirección-->
+<!--el titulo en h1 solo se puede usar una vez, h2 titulo de secciones (solo para titilos)
+h3 subitulos o titulos de productos o cards, h4 subtitulos de titulos de productos-->
+<!--p es para texto comun y corriente sin titulo, usada para subtitulo de h1-->
+<!--hacer los footers y headers de las secciones y agregar los links
+-->

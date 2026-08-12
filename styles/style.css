@@ -1,0 +1,601 @@
+/* =====================================================
+   RESET GLOBAL
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   PALETA DE COLORES
+   Fondo general: #f2e6df
+   Títulos y logo: #a69fce
+   Subtítulos y detalles: #89b5e0
+   Texto y sombreados: #656ea0
+   Fondo hero y detalles: #f7adba
+   ===================================================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(242, 230, 223);
+  color: rgb(101, 110, 160);
+}
+
+/* Clase extra para páginas con fondo rosa completo (ej: Sobre mí) */
+.fondo-rosa {
+  background-color: #f2e6dfae;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* =====================================================
+   HEADER / NAVBAR
+   Mobile-first: logo arriba, nav abajo (grid de 1 columna)
+   ===================================================== */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "logo"
+    "nav";
+  gap: 15px;
+  align-items: center;
+  background-color: rgba(247, 173, 186, 0.4);
+  padding: 20px;
+}
+
+header .logo {
+  grid-area: logo;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header nav {
+  grid-area: nav;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: rgb(101, 110, 160);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: rgb(166, 159, 206);
+}
+
+/* ---------- MAIN ---------- */
+
+main {
+  padding: 20px;
+}
+
+/* ---------- HERO CON IMAGEN DE FONDO (solo Index) ---------- */
+
+.hero-imagen {
+  background-image: url('../assets/images/heroceleste.png');
+  background-size: cover;
+  background-position: right center;
+  padding: 100px 20px;
+}
+
+.hero-imagen .hero-texto {
+  max-width: 500px;
+  color: #656ea0;
+}
+
+.hero-imagen h2 {
+  color: #656ea0;
+  text-shadow: 1px 1px 6px #656ea099;
+}
+
+.hero-imagen p {
+  color: #656ea0;
+  text-shadow: 1px 1px 6px #656ea099;
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+.hero h2 {
+  color: rgb(101, 110, 160);
+}
+
+.imagen-seccion {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.seccion-centrada {
+  text-align: center;
+}
+
+/* =====================================================
+   PRESENTACIÓN (Sobre mí, Proyectos, Herramientas, Contacto)
+   Mobile-first: texto arriba, imagen abajo (grid de 1 columna con áreas)
+   ===================================================== */
+
+.presentacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "texto"
+    "imagen";
+  gap: 30px;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+}
+
+.presentacion-texto {
+  grid-area: texto;
+  text-align: left;
+}
+
+.presentacion-imagen {
+  grid-area: imagen;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.etiqueta {
+  color: rgb(101, 110, 160);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.punto {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.punto img {
+  max-width: 35px;
+}
+
+.punto h3 {
+  margin-bottom: 5px;
+}
+
+.btn-cv {
+  display: inline-block;
+  background-color: #f7adba;
+  color: #f2e6df;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.btn-cv:hover {
+  background-color: rgb(166, 159, 206);
+}
+
+/* Artículos de contenido (párrafos sueltos) */
+
+article {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.destacado {
+  color: rgb(247, 173, 186);
+  font-weight: bold;
+}
+
+/* =====================================================
+   GRILLA DE CARDS (Servicios, Stats, Proyectos)
+   Mobile-first: 1 columna apilada
+   ===================================================== */
+
+.lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.card {
+  background-color: #f2e6df;
+  border: 2px solid rgb(137, 181, 224);
+  padding: 30px 25px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.card img {
+  max-width: 70px;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+/* Imagen de portada dentro de las cards de Proyectos (más grande que un ícono) */
+
+.card img.imagen-proyecto {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  max-width: none;
+}
+
+/* =====================================================
+   GRILLA DE CARDS CUADRADAS (Herramientas)
+   Mobile-first: 1 columna apilada
+   ===================================================== */
+
+.lista-cuadrada {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.card-cuadrada {
+  background-color: #f2e6df;
+  border: 2px solid rgb(137, 181, 224);
+  padding: 20px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.card-cuadrada img {
+  max-width: 60px;
+  margin-bottom: 10px;
+}
+
+/* ---------- CONTACTO ---------- */
+
+.contacto-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.formulario,
+.info-contacto {
+  background-color: #f2e6df;
+  border: 2px solid rgb(137, 181, 224);
+  padding: 25px;
+  flex: 1 1 300px;
+  border-radius: 10px;
+}
+
+.formulario label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.formulario label:first-child {
+  margin-top: 0;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgb(137, 181, 224);
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(101, 110, 160);
+}
+
+.formulario button {
+  margin-top: 20px;
+  background-color: rgb(247, 173, 186);
+  color: #f2e6df;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: rgb(101, 110, 160);
+}
+
+.dato-contacto {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dato-contacto img {
+  max-width: 40px;
+}
+
+.dato-contacto h3 {
+  font-size: 1rem;
+  margin-bottom: 3px;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(166, 159, 206);
+  color: rgb(101, 110, 160);
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+footer a {
+  color: rgb(101, 110, 160);
+}
+
+footer .footer-content {
+  padding: 10px;
+}
+
+/* =====================================================
+   RESPONSIVE — ESCALERA MOBILE-FIRST
+   ===================================================== */
+
+/* ---------- TABLET (a partir de 768px) ---------- */
+
+@media (min-width: 768px) {
+
+  /* La navbar pasa de apilada a una sola fila: logo a la izquierda, nav a la derecha */
+  header {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "logo nav";
+  }
+
+    .hero-imagen {
+    background-position: center;
+  }
+  header nav ul {
+    justify-content: flex-end;
+  }
+
+  /* Las cards pasan de 1 a 2 columnas */
+  .lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lista-cuadrada {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- DESKTOP (a partir de 1024px) ---------- */
+
+@media (min-width: 1024px) {
+
+  /* El texto y la imagen de "Presentación" quedan lado a lado */
+  .presentacion {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "texto imagen";
+    align-items: center;
+  }
+
+  /* Las cards pasan a 3 columnas */
+  .lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+/* Excepción: Proyectos siempre en 4 columnas en escritorio */
+  .lista.lista-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* Las cards cuadradas de Herramientas quedan en 3x3 */
+  .lista-cuadrada {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* =====================================================
+   BOOTSTRAP — ESTILOS PROPIOS SOBRE LOS COMPONENTES
+   ===================================================== */
+
+/* ---------- NAVBAR DE BOOTSTRAP ---------- */
+
+.navbar-custom {
+  background-color: rgba(247, 173, 186, 0.4);
+  padding: 15px 20px;
+}
+
+.navbar-custom .navbar-brand img {
+  height: 55px;
+}
+
+.navbar-custom .nav-link {
+  color: rgb(101, 110, 160) !important;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: rgb(166, 159, 206) !important;
+}
+
+/* Ícono hamburguesa con el color de la paleta en vez del gris por defecto */
+.navbar-custom .navbar-toggler {
+  border-color: rgb(101, 110, 160);
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(101,110,160,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ---------- LINK ACTIVO DEL NAVBAR (con "+" y línea rosa) ---------- */
+
+.navbar-custom .nav-link {
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.navbar-custom .nav-link.active {
+  color: rgb(247, 173, 186) !important;
+}
+
+/* Destello (imagen) al lado del texto activo */
+.navbar-custom .nav-link.active::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  background-image: url('../assets/images/destello.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/* La línea rosa debajo, solo en el link activo */
+.navbar-custom .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(247, 173, 186);
+  border-radius: 2px;
+}
+
+/* ---------- CAROUSEL / GALERÍA (8 banners, autoplay) ---------- */
+
+.galeria {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.galeria .carousel {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid rgb(137, 181, 224);
+}
+
+.galeria .carousel-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 15 / 1;
+  object-fit: cover;
+}
+
+.galeria .carousel-caption {
+  background-color: rgba(101, 110, 160, 0);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Con 8 indicadores, se ven muy apretados por defecto: los achicamos un poco */
+.galeria .carousel-indicators [data-bs-target] {
+  background-color: rgba(101, 110, 160, 0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+
+.galeria .carousel-control-prev-icon,
+.galeria .carousel-control-next-icon {
+  background-color: rgba(101, 110, 160, 0);
+  border-radius: 50%;
+  padding: 18px;
+}
+
+/* ---------- INTERACCIÓN EN LAS CARDS (hover + selección) ---------- */
+
+.card,
+.card-cuadrada {
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.card:hover,
+.card-cuadrada:hover {
+  box-shadow: 0 6px 16px rgba(101, 110, 160, 0.5);
+}
+
+.card:focus,
+.card-cuadrada:focus {
+  outline: none;
+  border: 4px solid rgb(101, 110, 160);
+}
+
+/* Asegurar el color violeta oscuro en los textos de las cards */
+.card h3,
+.card p {
+  color: rgb(101, 110, 160);
+}
+
+/* ---------- INTERACCIÓN EN LOS LINKS DEL FOOTER ---------- */
+
+footer a {
+  text-decoration: none;
+  transition: font-weight 0.2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:focus {
+  outline: none;
+  font-weight: bold;
+}
+/* ---------- LOGOS DE REDES SOCIALES EN EL FOOTER ---------- */
+
+.footer-redes {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer-redes img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.footer-redes a:hover img {
+  transform: scale(1.15);
+}
