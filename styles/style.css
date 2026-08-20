@@ -525,6 +525,7 @@ footer .footer-content {
   background-color: rgba(101, 110, 160, 0);
   border-radius: 10px;
   padding: 10px;
+   color: rgba(101, 110, 160, 0.842)
 }
 
 /* Con 8 indicadores, se ven muy apretados por defecto: los achicamos un poco */
