@@ -371,6 +371,13 @@ footer .footer-content {
   padding: 10px;
 }
 
+footer .footer-content h3 {
+  font-size: 0.85rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+
 /* =====================================================
    RESPONSIVE — ESCALERA MOBILE-FIRST
    ===================================================== */
@@ -568,21 +575,7 @@ footer .footer-content {
   color: rgb(101, 110, 160);
 }
 
-/* ---------- INTERACCIÓN EN LOS LINKS DEL FOOTER ---------- */
 
-footer a {
-  text-decoration: none;
-  transition: font-weight 0.2s ease;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-footer a:focus {
-  outline: none;
-  font-weight: bold;
-}
 /* ---------- LOGOS DE REDES SOCIALES EN EL FOOTER ---------- */
 
 .footer-redes {
