@@ -372,7 +372,7 @@ footer .footer-content {
 }
 
 footer .footer-content h3 {
-  font-size: 0.85rem;
+  font-size: 1.10rem;
   font-weight: bold;
   font-family: 'Poppins', sans-serif;
 }
@@ -587,9 +587,11 @@ footer .footer-content h3 {
 .footer-redes img {
   width: 36px;
   height: 36px;
-  transition: transform 0.3s ease;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .footer-redes a:hover img {
   transform: scale(1.15);
+  box-shadow: 0 6px 16px rgba(101, 110, 160, 0.5);
 }
