@@ -1,0 +1,13 @@
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuración local de VS Code (si no querés compartir tus preferencias personales)
+.vscode/*
+!.vscode/settings.json
+
+# Archivos temporales de compilación SCSS (los vamos a necesitar pronto)
+*.css.map
+
+# Copia de seguridad del CSS original (no se sube al repo)
+styles/style-backup.css
