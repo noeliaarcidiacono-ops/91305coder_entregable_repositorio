@@ -1,0 +1,43 @@
+@use '../utilities/variables' as *;
+
+.galeria {
+  padding: 40px 20px;
+  text-align: center;
+
+  .carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: $radio-borde;
+    overflow: hidden;
+    border: $borde-card;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 15 / 1;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    background-color: rgba($color-texto, 0);
+    border-radius: $radio-borde;
+    padding: 10px;
+    color: rgba($color-texto, 0.842);
+  }
+
+  .carousel-indicators [data-bs-target] {
+    background-color: rgba($color-texto, 0);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 4px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba($color-texto, 0);
+    border-radius: 50%;
+    padding: 18px;
+  }
+}

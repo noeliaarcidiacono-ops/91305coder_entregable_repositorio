@@ -1,0 +1,40 @@
+@use '../utilities/variables' as *;
+
+.navbar-custom .nav-link {
+  position: relative;
+  padding-bottom: 8px;
+  color: $color-texto !important;
+  font-weight: bold;
+  font-family: $font-body;
+
+  &:hover {
+    color: $color-titulo !important;
+  }
+
+  &.active {
+    color: $color-hero !important;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      background-image: url('../assets/images/destello.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $color-hero;
+      border-radius: 2px;
+    }
+  }
+}

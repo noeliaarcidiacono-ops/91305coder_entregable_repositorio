@@ -1,0 +1,56 @@
+@use '../utilities/variables' as *;
+
+.contacto-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.formulario,
+.info-contacto {
+  background-color: $color-fondo;
+  border: $borde-card;
+  border-radius: $radio-borde;
+  padding: 25px;
+  flex: 1 1 300px;
+}
+
+.formulario {
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 15px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $color-subtitulo;
+    border-radius: $radio-borde;
+    font-family: $font-body;
+    color: $color-texto;
+  }
+}
+
+.dato-contacto {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 40px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+}

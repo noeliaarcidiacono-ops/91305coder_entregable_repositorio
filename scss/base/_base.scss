@@ -1,0 +1,40 @@
+@use '../utilities/variables' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-fondo;
+  color: $color-texto;
+}
+
+.fondo-rosa {
+  background-color: $color-fondo-rosa;
+}
+
+main {
+  padding: 20px;
+}
+
+article {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.etiqueta {
+  color: $color-texto;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.seccion-centrada {
+  text-align: center;
+}
+
+.destacado {
+  color: $color-hero;
+  font-weight: bold;
+}

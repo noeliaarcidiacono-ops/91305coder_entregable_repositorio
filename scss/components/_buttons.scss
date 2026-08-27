@@ -1,0 +1,31 @@
+@use '../utilities/variables' as *;
+
+.btn-cv {
+  display: inline-block;
+  background-color: $color-hero;
+  color: $color-fondo;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: $radio-boton;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: $color-titulo;
+  }
+}
+
+.formulario button {
+  margin-top: 20px;
+  background-color: $color-hero;
+  color: $color-fondo;
+  border: none;
+  padding: 12px 25px;
+  border-radius: $radio-boton;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-texto;
+  }
+}

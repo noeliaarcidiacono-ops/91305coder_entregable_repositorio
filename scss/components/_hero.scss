@@ -1,0 +1,29 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.hero-imagen {
+  background-image: url('../assets/images/heroceleste.png');
+  background-size: cover;
+  background-position: right center;
+  padding: 100px 20px;
+
+  @include tablet {
+    background-position: center;
+  }
+
+  .hero-texto {
+    max-width: 500px;
+    color: $color-texto;
+  }
+
+  h2,
+  p {
+    color: $color-texto;
+    text-shadow: 1px 1px 6px rgba($color-texto, 0.6);
+  }
+}
+
+.imagen-seccion {
+  max-width: 300px;
+  border-radius: $radio-borde;
+}

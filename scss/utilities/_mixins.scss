@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+// Breakpoints (mobile-first)
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Tarjeta base: fondo, borde y radio comunes a .card y .card-cuadrada
+@mixin tarjeta-base {
+  background-color: $color-fondo;
+  border: $borde-card;
+  border-radius: $radio-borde;
+  text-align: center;
+}
+
+// Estados interactivos comunes a las tarjetas
+@mixin tarjeta-interactiva {
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    box-shadow: $sombra-hover;
+  }
+
+  &:focus {
+    outline: none;
+    border: 4px solid $color-texto;
+  }
+}
+
+// Grilla reciclable: 1 columna en mobile, 2 en tablet, N en desktop
+@mixin grilla-responsiva($columnas-desktop: 3) {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat($columnas-desktop, 1fr);
+  }
+}

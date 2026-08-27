@@ -1,0 +1,18 @@
+@use '../utilities/variables' as *;
+
+.navbar-custom {
+  background-color: rgba($color-hero, 0.4);
+  padding: 15px 20px;
+
+  .navbar-brand img {
+    height: 55px;
+  }
+
+  .navbar-toggler {
+    border-color: $color-texto;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(101,110,160,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}

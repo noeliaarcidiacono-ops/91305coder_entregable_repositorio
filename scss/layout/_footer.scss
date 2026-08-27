@@ -1,0 +1,44 @@
+@use '../utilities/variables' as *;
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  background-color: $color-titulo;
+  color: $color-texto;
+  padding: 20px;
+  flex-wrap: wrap;
+
+  a {
+    color: $color-texto;
+  }
+
+  .footer-content {
+    padding: 10px;
+
+    h3 {
+      font-size: 1.10rem;
+      font-weight: bold;
+      font-family: $font-body;
+    }
+  }
+}
+
+.footer-redes {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+
+  img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  a:hover img {
+    transform: scale(1.15);
+    box-shadow: $sombra-hover;
+  }
+}

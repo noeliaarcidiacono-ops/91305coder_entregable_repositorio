@@ -1,0 +1,69 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.lista {
+  @include grilla-responsiva(3);
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  &.lista-4 {
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.card {
+  @include tarjeta-base;
+  @include tarjeta-interactiva;
+  padding: 30px 25px;
+
+  img {
+    max-width: 70px;
+    display: block;
+    margin: 0 auto 15px;
+
+    &.imagen-proyecto {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      max-width: none;
+    }
+  }
+
+  h3,
+  p {
+    color: $color-texto;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+.lista-cuadrada {
+  @include grilla-responsiva(3);
+  gap: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.card-cuadrada {
+  @include tarjeta-base;
+  @include tarjeta-interactiva;
+  padding: 20px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 60px;
+    margin-bottom: 10px;
+  }
+}

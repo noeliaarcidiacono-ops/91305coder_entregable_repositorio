@@ -1,0 +1,47 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.presentacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "texto"
+    "imagen";
+  gap: 30px;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+
+  @include desktop {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "texto imagen";
+    align-items: center;
+  }
+
+  &-texto {
+    grid-area: texto;
+    text-align: left;
+  }
+
+  &-imagen {
+    grid-area: imagen;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: $radio-borde;
+  }
+}
+
+.punto {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 35px;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+  }
+}
