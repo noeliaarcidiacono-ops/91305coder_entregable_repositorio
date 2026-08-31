@@ -45,11 +45,16 @@
 }
 
 .lista-cuadrada {
-  @include grilla-responsiva(3);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   max-width: 480px;
   margin: 0 auto;
   padding: 20px 0;
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card-cuadrada {

@@ -227,23 +227,16 @@ footer .footer-content h3 {
 
 .lista-cuadrada {
   display: grid;
-  grid-template-columns: 1fr;
-}
-@media (min-width: 768px) {
-  .lista-cuadrada {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 @media (min-width: 1024px) {
   .lista-cuadrada {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-.lista-cuadrada {
-  gap: 20px;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 20px 0;
 }
 
 .card-cuadrada {
@@ -276,19 +269,64 @@ footer .footer-content h3 {
 .hero-imagen {
   background-image: url("../assets/images/heroceleste.png");
   background-size: cover;
-  background-position: right center;
-  padding: 100px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1920/500;
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .hero-imagen {
-    background-position: center;
+    padding: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-imagen {
+    padding: 100px 20px;
   }
 }
 .hero-imagen .hero-texto {
-  max-width: 500px;
-  color: #656ea0;
+  max-width: 260px;
 }
-.hero-imagen h2,
+@media (min-width: 768px) {
+  .hero-imagen .hero-texto {
+    max-width: 400px;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-imagen .hero-texto {
+    max-width: 500px;
+  }
+}
+.hero-imagen h1 {
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+@media (min-width: 768px) {
+  .hero-imagen h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-imagen h1 {
+    font-size: 2.5rem;
+  }
+}
+.hero-imagen p {
+  font-size: 0.75rem;
+}
+@media (min-width: 768px) {
+  .hero-imagen p {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-imagen p {
+    font-size: 1rem;
+  }
+}
+.hero-imagen h1,
 .hero-imagen p {
   color: #656ea0;
   text-shadow: 1px 1px 6px rgba(101, 110, 160, 0.6);
@@ -403,7 +441,8 @@ footer .footer-content h3 {
   width: 100%;
   height: auto;
   aspect-ratio: 15/1;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: #f2e6df;
 }
 .galeria .carousel-caption {
   background-color: rgba(101, 110, 160, 0);

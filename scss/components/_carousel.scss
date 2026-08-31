@@ -1,4 +1,5 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 .galeria {
   padding: 40px 20px;
@@ -12,12 +13,13 @@
     border: $borde-card;
   }
 
-  .carousel-item img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 15 / 1;
-    object-fit: cover;
-  }
+ .carousel-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 15 / 1;
+  object-fit: contain;
+  background-color: $color-fondo;
+}
 
   .carousel-caption {
     background-color: rgba($color-texto, 0);

@@ -4,19 +4,59 @@
 .hero-imagen {
   background-image: url('../assets/images/heroceleste.png');
   background-size: cover;
-  background-position: right center;
-  padding: 100px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  aspect-ratio: 1920 / 500;   
+  display: flex;
+  align-items: center;
+  padding: 20px;
 
   @include tablet {
-    background-position: center;
+    padding: 40px;
+  }
+
+  @include desktop {
+    padding: 100px 20px;
   }
 
   .hero-texto {
-    max-width: 500px;
-    color: $color-texto;
+  max-width: 260px;
+
+  @include tablet {
+    max-width: 400px;
   }
 
-  h2,
+  @include desktop {
+    max-width: 500px;
+  }
+}
+
+  h1 {
+    font-size: 1.1rem;
+    line-height: 1.2;
+
+    @include tablet {
+      font-size: 1.8rem;
+    }
+
+    @include desktop {
+      font-size: 2.5rem;
+    }
+  }
+
+  p {
+    font-size: 0.75rem;
+
+    @include tablet {
+      font-size: 0.9rem;
+    }
+
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+
+  h1,
   p {
     color: $color-texto;
     text-shadow: 1px 1px 6px rgba($color-texto, 0.6);

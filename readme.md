@@ -27,5 +27,5 @@ Los estilos están organizados en partials SCSS dentro de la carpeta `scss/`:
 Para compilar los estilos:
 \`\`\`
 npm install
-npx sass --watch scss/main.scss styles/main.css
+npx sass --watch scss/main.scss css/style.css
 \`\`\
