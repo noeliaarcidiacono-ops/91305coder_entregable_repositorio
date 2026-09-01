@@ -1,4 +1,5 @@
 @use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
 .btn-cv {
   display: inline-block;
@@ -9,6 +10,7 @@
   padding: 12px 25px;
   border-radius: $radio-boton;
   margin-top: 10px;
+  @include animacion-pulso(1.8s);
 
   &:hover {
     background-color: $color-titulo;
@@ -24,6 +26,7 @@
   border-radius: $radio-boton;
   font-weight: bold;
   cursor: pointer;
+  @include animacion-pulso(2s);
 
   &:hover {
     background-color: $color-texto;

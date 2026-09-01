@@ -16,9 +16,10 @@
 }
 
 .card {
-  @include tarjeta-base;
-  @include tarjeta-interactiva;
+   @include tarjeta-base;
+  @include tarjeta-interactiva(1.04);
   padding: 30px 25px;
+
 
   img {
     max-width: 70px;
@@ -36,6 +37,7 @@
 
   h3,
   p {
+    @extend %texto-violeta;
     color: $color-texto;
   }
 
@@ -59,7 +61,7 @@
 
 .card-cuadrada {
   @include tarjeta-base;
-  @include tarjeta-interactiva;
+  @include tarjeta-interactiva(1.08);
   padding: 20px;
   aspect-ratio: 1 / 1;
   display: flex;

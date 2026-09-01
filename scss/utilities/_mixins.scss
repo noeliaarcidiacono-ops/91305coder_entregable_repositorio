@@ -48,3 +48,46 @@
     grid-template-columns: repeat($columnas-desktop, 1fr);
   }
 }
+
+// Animación de pulso infinita (para botones)
+@keyframes pulso {
+  0% {
+    box-shadow: 0 0 0 0 rgba($color-texto, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba($color-texto, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba($color-texto, 0);
+  }
+}
+
+// Mixin CON PARÁMETROS: duración configurable, con valor por defecto
+@mixin animacion-pulso($duracion: 1.8s) {
+  animation: pulso $duracion ease-in-out infinite;
+}
+
+// Ahora "tarjeta-interactiva" recibe un parámetro para la escala del hover
+@mixin tarjeta-interactiva($escala: 1.04) {
+  transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: $sombra-hover;
+    transform: scale($escala);
+  }
+
+  &:focus {
+    outline: none;
+    border: 4px solid $color-texto;
+  }
+}
+
+// Placeholder reutilizable con @extend: texto en violeta oscuro
+%texto-violeta {
+  color: $color-texto;
+}
+
+// Placeholder reutilizable: sombra violeta al hacer hover
+%sombra-hover-violeta {
+  box-shadow: $sombra-hover;
+}
