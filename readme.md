@@ -5,6 +5,9 @@ Portfolio personal de diseño UX-UI desarrollado con HTML, CSS y Bootstrap.
 ## 🔗 Sitio publicado
 https://noeliaarcidiacono-ops.github.io/91305coder_entregable_repositorio/
 
+## 🔗 Sitio desplegado
+https://portfolio-uxui-noelia-arcidiacono.netlify.app/
+
 ## 🛠️ Tecnologías
 - HTML5
 - CSS3 (Grid, Flexbox, Media Queries)
